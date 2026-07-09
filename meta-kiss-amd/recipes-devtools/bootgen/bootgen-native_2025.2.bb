@@ -4,10 +4,7 @@ DESCRIPTION = "Building and installing bootgen, a Xilinx tool that lets you stit
 
 inherit native
 
-SRC_URI = " \
-    git://github.com/Xilinx/bootgen.git;protocol=https;branch=${BRANCH} \
-    file://0001-Fix-build-with-Yocto.patch \
-    "
+SRC_URI = "git://github.com/Xilinx/bootgen.git;protocol=https;branch=${BRANCH}"
 BRANCH = "xlnx_rel_v${PV}"
 SRCREV = "0e336a00dcff5842648f4a1e9f919abf7c960d97"
 
