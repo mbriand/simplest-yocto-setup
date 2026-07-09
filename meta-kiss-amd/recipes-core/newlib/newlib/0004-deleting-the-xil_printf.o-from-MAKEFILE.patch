@@ -1,0 +1,27 @@
+From ae34c04fd8689115d411aaf968d8b9977a62d8c7 Mon Sep 17 00:00:00 2001
+From: Mahesh Bodapati <mbodapat@xilinx.com>
+Date: Mon, 23 Jan 2017 15:44:17 +0530
+Subject: [PATCH 04/10] deleting the xil_printf.o from MAKEFILE
+
+(cherry picked from commit 250aa479da0b688b87f1fa42f45ecd4536194a45)
+---
+ libgloss/microblaze/Makefile.inc | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/libgloss/microblaze/Makefile.inc b/libgloss/microblaze/Makefile.inc
+index ca1e8bf83744..cce1225e0d9d 100644
+--- a/libgloss/microblaze/Makefile.inc
++++ b/libgloss/microblaze/Makefile.inc
+@@ -80,8 +80,7 @@ multilibtool_LIBRARIES += %D%/libgloss.a
+ 	%D%/_program_clean.S \
+ 	%D%/_program_init.S \
+ 	%D%/xil_malloc.c \
+-	%D%/xil_sbrk.c \
+-	%D%/xil_printf.c
++	%D%/xil_sbrk.c
+ 
+ multilibtool_LIBRARIES += %D%/libgloss-linux.a
+ %C%_libgloss_linux_a_SOURCES = \
+-- 
+2.47.3
+
