@@ -10,6 +10,8 @@ LIC_FILES_CHKSUM = "file://${UNPACKDIR}/${BP}/LICENSES/MIT;md5=e8f57dd048e186199
 S = "${UNPACKDIR}/${BP}/lib/sw_apps/zynqmp_pmufw/src"
 
 CFLAGS += "-Os -flto -ffat-lto-objects"
+#CFLAGS += "-Os "
+#LTO = ""
 
 EXTRA_OEMAKE += 'CC="${CC}" ARCHIVER="${AR}" COMPILER="${CC}" CFLAGS="${CFLAGS}"'
 
