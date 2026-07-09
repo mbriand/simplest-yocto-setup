@@ -1,0 +1,36 @@
+From 1afd57b12b592191272a32359660039c43316f7f Mon Sep 17 00:00:00 2001
+From: Mathieu Dubois-Briand <mathieu.dubois-briand@bootlin.com>
+Date: Thu, 9 Jul 2026 10:45:15 +0200
+Subject: [PATCH 2/2] Revert "feat(zynqmp): enable ENABLE_LTO flag"
+
+This reverts commit 19d875677e368e96ca0e96ec59e0c60a092114b4.
+Upstream-Status: Inappropriate [meta-kiss specific]
+Signed-off-by: Mathieu Dubois-Briand <mathieu.dubois-briand@bootlin.com>
+---
+ plat/xilinx/zynqmp/platform.mk | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/plat/xilinx/zynqmp/platform.mk b/plat/xilinx/zynqmp/platform.mk
+index b06942ffc594..8a09b91e6882 100644
+--- a/plat/xilinx/zynqmp/platform.mk
++++ b/plat/xilinx/zynqmp/platform.mk
+@@ -2,7 +2,7 @@
+ # Copyright (c) 2013-2021, Arm Limited and Contributors. All rights reserved.
+ # Portions copyright (c) 2021-2022, ProvenRun S.A.S. All rights reserved.
+ # Copyright (c) 2018-2022, Xilinx, Inc. All rights reserved.
+-# Copyright (c) 2022-2024, Advanced Micro Devices, Inc. All rights reserved.
++# Copyright (c) 2022-2023, Advanced Micro Devices, Inc. All rights reserved.
+ #
+ # SPDX-License-Identifier: BSD-3-Clause
+ 
+@@ -16,7 +16,6 @@ ZYNQMP_WDT_RESTART := 0
+ IPI_CRC_CHECK := 0
+ override RESET_TO_BL31 := 1
+ override WARMBOOT_ENABLE_DCACHE_EARLY := 1
+-ENABLE_LTO := 1
+ 
+ EL3_EXCEPTION_HANDLING := $(SDEI_SUPPORT)
+ 
+-- 
+2.47.3
+
