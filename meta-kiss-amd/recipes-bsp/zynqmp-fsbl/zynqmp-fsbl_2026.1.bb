@@ -2,7 +2,7 @@ SUMMARY = "Building and installing ZynqMP fsbl"
 
 SRC_URI = "git://github.com/Xilinx/embeddedsw.git;protocol=https;branch=${BRANCH}"
 BRANCH = "xlnx_rel_v${PV}"
-SRCREV = "145cea8fcf98268c8b163f732c181f008e887e53"
+SRCREV = "2fb454742f9d42e23a46a13c0eb09e29dc52c6d1"
 
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSES/MIT;md5=e8f57dd048e186199433be2c41bd3d6d"
@@ -50,3 +50,7 @@ addtask deploy after do_install before do_build
 COMPATIBLE_MACHINE = "^(zynqmp)$"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+# TODO
+INSANE_SKIP:${PN} += "buildpaths"
+INSANE_SKIP:${PN}-dbg += "buildpaths"
