@@ -31,9 +31,9 @@
         },
         "meta-kiss": {
             "git-remote": {
-                "uri": "https://github.com/bootlin/yocto-kiss.git",
-                "branch": "wrynose",
-                "rev": "wrynose"
+                "uri": "https://github.com/mbriand/simplest-yocto-setup",
+                "branch": "mathieu/bbsetup",
+                "rev": "mathieu/bbsetup"
             }
         },
         "meta-openembedded": {
